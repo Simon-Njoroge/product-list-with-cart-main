@@ -79,7 +79,7 @@ async function init() {
   const cart = await cartDB.getAllItems();
   updateCartUI(cart);
 
-  const res = await fetch('../data.json');
+  const res = await fetch('/data.json');
   const data: Dessert[] = await res.json();
 
   data.forEach((item) => {
