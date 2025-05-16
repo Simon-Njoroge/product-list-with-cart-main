@@ -2,7 +2,6 @@ import './style.css';
 import { CartDB } from './cartdb';
 import type { Dessert } from './cartdb';
 import remove from '../assets/images/icon-remove-item.svg';
-
 const cartDB = new CartDB();
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -80,7 +79,7 @@ async function init() {
   const cart = await cartDB.getAllItems();
   updateCartUI(cart);
 
-  const res = await fetch('./data/data.json');
+  const res = await fetch('../data.json');
   const data: Dessert[] = await res.json();
 
   data.forEach((item) => {
