@@ -1,6 +1,6 @@
 import './style.css';
-import { CartDB } from './CartDB';
-import type { Dessert } from './CartDB';
+import { CartDB } from './cartdb';
+import type { Dessert } from './cartdb';
 import remove from '../assets/images/icon-remove-item.svg';
 
 const cartDB = new CartDB();
@@ -91,7 +91,7 @@ async function init() {
       <p class="category">${item.category}</p>
       <p class="itemtitle">${item.name}</p>
       <p class="price">$${item.price.toFixed(2)}</p>
-      <button class="addcart"><img src="../assets/images/icon-add-to-cart.svg"/>
+      <button class="addcart"><span><img src="../assets/images/icon-add-to-cart.svg"/>
       Add to Cart</button>
     `;
 
